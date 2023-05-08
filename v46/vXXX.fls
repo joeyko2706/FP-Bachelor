@@ -1,6 +1,0 @@
-PWD /mnt/c/Users/joelk/Documents/FortgeschrittenesPraktikum/v46
-INPUT /home/joey/.local/texlive/2022/texmf.cnf
-INPUT /home/joey/.local/texlive/2022/texmf-dist/web2c/texmf.cnf
-INPUT /home/joey/.local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /mnt/c/Users/joelk/Documents/FortgeschrittenesPraktikum/v46/vXXX.tex
-OUTPUT vXXX.log
