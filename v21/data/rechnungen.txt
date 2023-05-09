@@ -1,0 +1,20 @@
+--------------
+Ausgerechnete Werte:  
+
+Steigung1 =  	 (1.73+/-0.10)e-10
+Steigung2 =  	 (1.92+/-0.14)e-10
+LandeFaktor1 =  	 0.41345+/-0.02339
+LandeFaktor2 =  	 0.37301+/-0.02668
+Verhältnis 1/2:  1.11+/-0.10
+g_j =  	 2.333333333333333
+Kernspin_1=  	 2.32181+/-0.15967
+Kernspin_2=  	 2.62768+/-0.22371
+Isotopenverhältnis I_1/I_2 =  0.4 
+
+--------------
+Quadratische Zeeman-Aufspaltung
+Maximales BFeld1:  174.5381
+Maximales BFeld2:  202.4051
+Quadratische Zeeman-Aufspaltung 1 in eV:  (4.18+/-0.24)e-09
+Quadratische Zeeman-Aufspaltung 2 in eV:  (4.36+/-0.31)e-09
+-------------- 
