@@ -39,13 +39,11 @@ data1['f'] *= 10**6
 data2['f'] *= 10**6
 data1['B_horizontal'] *=  10**(-3) # von 200 Milliampere auf Ampere umrechnen
 data2['B_horizontal'] *=  10**(-3)
-data1['B_sweep'] *= 0.1
-data2['B_sweep'] *= 0.1
-
 
 #Berechne die Magnetfeldstärke aus den beiden Spulen 
-B_1 = B(data1['B_sweep'], N_sweep, R_sweep) + B(data1['B_horizontal'], N_horizontal, R_horizontal) + B(0.147, N_vertiakl, R_vertikal) #nochmal den Spulenstrom der vertikalspule raussuchen
-B_2 = B(data2['B_sweep'], N_sweep, R_sweep) + B(data2['B_horizontal'], N_horizontal, R_horizontal) + B(0.147, N_vertiakl, R_vertikal)
+B_1 = B(data1['B_sweep'], N_sweep, R_sweep) + B(data1['B_horizontal'], N_horizontal, R_horizontal) 
+B_2 = B(data2['B_sweep'], N_sweep, R_sweep) + B(data2['B_horizontal'], N_horizontal, R_horizontal) 
+B_vertikal = B(235, N_vertiakl, R_vertikal)
 
 
 def f(x,m,b):   #Funktion für die lineare Ausgleichsgerade
@@ -62,9 +60,9 @@ plt.plot(x, f(x, *paramsB1), "b--", label="lineare Regression")
 
 plt.xlim(0.1*10**6,1*10**6) #Plot schoener machen
 plt.xticks(np.linspace(0.1*10**6,1*10**6,10),[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
-plt.yticks(np.linspace(0.0, 0.03, 7), [0, 5, 10, 15, 20, 25, 30])
+plt.yticks(np.linspace(0.00004, 0.00018, 8), [40, 60, 80, 100, 120, 140, 160, 180])
 plt.xlabel(r'Frequenz $f$ / $\si{\mega\hertz}$')
-plt.ylabel(r'magn. Flussdichte $B$ / $\si{\milli\tesla}$')
+plt.ylabel(r'magn. Flussdichte $B$ / $\si{\micro\tesla}$')
 plt.legend(loc='best')
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig('build/Isotop1.pdf')
@@ -81,14 +79,13 @@ plt.plot(x, f(x, *paramsB2), "r--", label="lineare Regression")
 
 plt.xlim(0.1*10**6,1*10**6) #Plot schoener machen
 plt.xticks(np.linspace(0.1*10**6,1*10**6,10),[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
-plt.yticks(np.linspace(0.0, 0.035,8), [0, 5, 10, 15, 20, 25, 30, 35])
+plt.yticks(np.linspace(0.00005, 0.000225,8), [50, 75, 100, 125, 150, 175, 200, 225])
 plt.xlabel(r'Frequenz $f$ / $\si{\mega\hertz}$')
-plt.ylabel(r'magn. Flussdichte $B$ / $\si{\milli\tesla}$')
+plt.ylabel(r'magn. Flussdichte $B$ / $\si{\micro\tesla}$')
 plt.legend(loc='best')
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig('build/Isotop2.pdf')
 
-"""
 
 #Lande-Faktoren bestimmen über die Steigung
 g1 = h/(mu_b*mB1)
@@ -116,16 +113,22 @@ Isotopenverhältnis = Oszillos1/Oszillos2
 U1 = g1*mu_b*np.max(B_1)+g1**2*mu_b**2*np.max(B_1)**2*(1-2*2)/(4.53e-24) # Zeeman-Aufspaltung
 U2 = g2*mu_b*np.max(B_2)+g2**2*mu_b**2*np.max(B_2)**2*(1-2*3)/(2.01e-24)
 
+
 print('--------------')
 print('Ausgerechnete Werte: ', '\n')
+print('Erdmagnetfeld: ', B_vertikal)
 print('Steigung1 = ', '\t', mB1)
+print('Achsenabschnitt 1 =', '\t', bB1)
 print('Steigung2 = ', '\t', mB2)
+print('Achsenabschnitt 2 =', '\t', bB2)
 print('LandeFaktor1 = ', '\t', f'{g1:.5f}')
 print('LandeFaktor2 = ', '\t', f'{g2:.5f}')
 print("Verhältnis 1/2: ", g)
 print('g_j = ', '\t', gJ)
 print('Kernspin_1= ', '\t', f'{I1:.5f}')
 print('Kernspin_2= ', '\t', f'{I2:.5f}')
+print('Abweichung Kernspin1: ', f'{(I1/2.5):.5f}')
+print('Abweichung Kernspin1: ', f'{(I2/1.5):.5f}')
 print('Isotopenverhältnis I_1/I_2 = ', Isotopenverhältnis, '\n')
 print('--------------')
 print('Quadratische Zeeman-Aufspaltung')
@@ -139,7 +142,5 @@ print('--------------', '\n')
 #Daten für Latex ausgeben
 # print('-------------')
 # for i in range(10):   
-#     print(data1.iloc[i, 0], ' & ', data1.iloc[i, 1], ' & ', np.round(data1.iloc[i, 2],3), ' k')
-#     print(data2.iloc[i, 0], ' & ', data2.iloc[i, 1], ' & ', np.round(data2.iloc[i, 2],3), ' k')
-
-"""
+#     print(data1.iloc[i, 0], ' & ', np.round(data1.iloc[i, 1], 4), ' & ', np.round(data1.iloc[i, 2],3), ' k')
+    # print(data2.iloc[i, 0], ' & ', np.round(data2.iloc[i, 1], 4), ' & ', np.round(data2.iloc[i, 2],3), ' k')

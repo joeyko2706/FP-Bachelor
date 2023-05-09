@@ -1,20 +1,23 @@
 --------------
-Ausgerechnete Werte:  
+Ausgerechnete Werte:
 
-Steigung1 =  	 (1.73+/-0.10)e-10
-Steigung2 =  	 (1.92+/-0.14)e-10
-LandeFaktor1 =  	 0.41345+/-0.02339
-LandeFaktor2 =  	 0.37301+/-0.02668
-Verhältnis 1/2:  1.11+/-0.10
-g_j =  	 2.333333333333333
-Kernspin_1=  	 2.32181+/-0.15967
-Kernspin_2=  	 2.62768+/-0.22371
-Isotopenverhältnis I_1/I_2 =  0.4 
+Erdmagnetfeld:  0.03601302551763701
+Steigung1 =      (1.56+/-0.18)e-10
+Achsenabschnitt 1 =      (2.3+/-1.1)e-05
+Steigung2 =      (1.94+/-0.28)e-10
+Achsenabschnitt 2 =      (2.4+/-1.7)e-05
+LandeFaktor1 =           0.45696+/-0.05285
+LandeFaktor2 =           0.36865+/-0.05319
+Verhältnis 1/2:  1.24+/-0.23
+g_j =    2.333333333333333
+Kernspin_1=      2.05312+/-0.29526
+Kernspin_2=      2.66466+/-0.45657
+Isotopenverhältnis I_1/I_2 =  0.4
 
 --------------
 Quadratische Zeeman-Aufspaltung
-Maximales BFeld1:  174.5381
-Maximales BFeld2:  202.4051
-Quadratische Zeeman-Aufspaltung 1 in eV:  (4.18+/-0.24)e-09
-Quadratische Zeeman-Aufspaltung 2 in eV:  (4.36+/-0.31)e-09
--------------- 
+Maximales BFeld1:  190.5226
+Maximales BFeld2:  230.4972
+Quadratische Zeeman-Aufspaltung 1 in eV:  (5.0+/-0.6)e-09
+Quadratische Zeeman-Aufspaltung 2 in eV:  (4.9+/-0.7)e-09
+--------------
