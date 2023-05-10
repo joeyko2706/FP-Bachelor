@@ -20,11 +20,11 @@ Da an dem Gerät nur der Strom abzulesen ist, wird das Magnetfeld mithilfe der G
 \end{align}
 berechnet. Dabei ist $I$ der abgelesene Strom, $N$ die Windungszahl des Spulenpaares und $R$ der Radius der Spulen.
 In \autoref{tab:DatenIsotop1} und \autoref{tab:DatenIsotop2} sind die in dem Versuch gemessenen Daten zur Bestimmung der Resonanz in Abhängigkeit der eingestellten Resonanzfrequenzen
-$F_{\text{RF}}$ aufgetragen. Mithilfe dieser Daten wurden in \autoref{fig:plot1} und \autoref{fig:plot2} die Daten gegen eine lineare Regression der Form
+$f_{\text{RF}}$ für das jeweilige Isotop aufgetragen. Mithilfe dieser Daten wurden in \autoref{fig:plot1} und \autoref{fig:plot2} die Daten gegen eine lineare Regression der Form
 \begin{align}
     B=a\cdot f_{\text{RF}} + b
 \end{align}
-aufgetragen. Es ergeben sich für die beiden Isotope die folgenden Regressionswerte,
+ausgewertet. Es ergeben sich für die beiden Isotope die folgenden Regressionswerte,
 \begin{align*}
     a_1 &= \SI{1.73 \pm 0.10 e-10}{\mega\hertz\per\tesla}, \\
     b_1 &= \SI{2.3 \pm 1.1 e-5}{\tesla}, \\
@@ -78,14 +78,14 @@ aufgetragen. Es ergeben sich für die beiden Isotope die folgenden Regressionswe
 
 \begin{figure}[H]
     \centering
-    \includegraphics{build/Isotop1.pdf}
+    \includegraphics[width=0.7\textwidth]{build/Isotop1.pdf}
     \caption{Grafische Auswertung der Messdaten des ersten Isotops.}
     \label{fig:plot1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics{build/Isotop2.pdf}
+    \includegraphics[width=0.7\textwidth]{build/Isotop2.pdf}
     \caption{Grafische Auswertung der Messdaten des zweiten Isotops.}
     \label{fig:plot2}
 \end{figure}
@@ -100,16 +100,16 @@ Zur Bestimmung der Landé-Faktoren wird die Gleichung
 nach den Landé-Faktoren $g_F$ umgestellt, wobei $h$ das Plank'sche Wirkungsquantum, $\mu_B$ das Bohr'sche Magneton und $a$ die in \autoref{subsec:Erdmagnetfeld} ausgerechnete Steigung ist.
 Es ergeben sich die folgenden Werte,
 \begin{align*}
-    g_{F_1} &= \SI{0.45696 \pm 0.05285}, \\
-    g_{F_2} &= SI{0.36865 \pm 0.05319}.
+    g_{F_1} &= 0.45696 \pm 0.05285, \\
+    g_{F_2} &= 0.36865 \pm 0.05319.
 \end{align*}
 
 \noindent
-Der Kernspin lässt sich mithilfe der Gleichungen \textbf{HIER TEXT EINFÜGEN} berechnen. Mit den Quantenzahlen $J=S=\frac 12$ und $L=0$ für Rubidium \cite{Anleitung21} ergeben sich die folgenden
-Kernspins für die jeweiligen Isotopen
+Der Kernspin lässt sich mithilfe der Gleichung (\ref{eq:gf}) berechnen. Mit den Quantenzahlen $J=S=\frac 12$ und $L=0$ für Rubidium \cite{Anleitung21} ergeben sich die folgenden
+Kernspins für die jeweiligen Isotope
 \begin{align*}
-    I_1 &= \si{2.05312+-0.29526}, \\
-    I_2 &= \si{2.66466+-0.45657}.
+    I_1 &= 2.05312 \pm 0.29526, \\
+    I_2 &= 2.66466 \pm 0.45657.
 \end{align*}
 
 \subsection{Bestimmung des Isotopenverhältnisses}
@@ -120,7 +120,7 @@ Verhältnis der Isotope geschlossen. Die Aufnahme des Oszilloskopes ist in \auto
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\textwidth]{data/Oszilloskop.png}
+    \includegraphics[width=0.7\textwidth]{data/Oszilloskop.png}
     \caption{Fotografie des Signalverlaufs bei $\SI{100}{\kilo\hertz}$.}
     \label{fig:Oszilloskop}
 \end{figure}
@@ -136,9 +136,9 @@ Es folgt demnach ein Isotopenverhältnis von $\SI{40}{\percent}$.
 \subsection{Bestimmen des quadratischen Zeeman-Effektes}
 \label{subsec:quadrZeeman}
 
-\textbf{TEXT ERGÄNZEN}
+Die Energiedifferenzen der Niveaus beim quadratischen Zeeman-Effekt werden mit der Gleichung (\ref{eq:quadratisch}) berechnet.
 Mit den maximalen Magnetfeldern für die jeweiligen Resonanzstellen $B_1 = \SI{190.5226}{\micro\tesla}$ und $B_2 = \SI{230.4972}{\micro\tesla}$ folgt mit $m_F=2$ für $^{87}\text{Rb}$
-und $m_F = 2$ für $^{85}\text{Rb}$ und der Hyperfeinstrukturaufspaltung, die sich aus Gleichung XXX ergibt,
+und $m_F = 2$ für $^{85}\text{Rb}$ und der Hyperfeinstrukturaufspaltung, die sich aus Gleichung (\ref{eq:thermisch}) ergibt,
 \begin{align*}
     W_1 &= \SI{5.0+-0.6 e-09}{\eV}, \\
     W_2 &= \SI{4.9+-0.7 e-09}{\eV}.
