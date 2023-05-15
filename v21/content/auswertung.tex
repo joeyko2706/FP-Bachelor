@@ -7,7 +7,7 @@
 Bei ausgeschaltetem RF-Feld ist nach aufbauen der Apparatur ein breiter Peak zu sehen, der durch Kompensation der Erdmagnetfelder verkleinert werden sollen.
 Das dem Erdmagnetfeld entgegengerichtete Vertikalfeld ist dabei auf den folgenden Wert eingestellt worden,
 \begin{align*}
-    B_{\text{vertikal}} = \SI{36.013}{\milli\tesla}.
+    B_{\text{vertikal}} = \SI{36.013}{\micro\tesla}.
 \end{align*}
 Es wird die Stärke des gesamten horizontal angelegten Magnetfeldes aus der Abhängigkeit mit der Resonanzfrequenz der beiden Rubidium Isotope $^{87}\text{Rb}$ und $^{85}\text{Rb}$
 bestimmt. Dabei wird neben dem Sweep-Magnetfeld noch ein weiteres, horizontales Magnetfeld angelegt. Für das gesamte Magnetfeld folgt dabei,
@@ -24,12 +24,13 @@ $f_{\text{RF}}$ für das jeweilige Isotop aufgetragen. Mithilfe dieser Daten wur
 \begin{align}
     B=a\cdot f_{\text{RF}} + b
 \end{align}
-ausgewertet. Es ergeben sich für die beiden Isotope die folgenden Regressionswerte,
+ausgewertet. Dabei sind die grün markierten Messwerte aus den Berechnungen ausgeschlossen worden, da sie zu sehr von den anderen Messwerten abwichen.
+Es ergeben sich für die beiden Isotope die folgenden Regressionswerte,
 \begin{align*}
-    a_1 &= \SI{1.73 \pm 0.10 e-10}{\mega\hertz\per\tesla}, \\
-    b_1 &= \SI{2.3 \pm 1.1 e-5}{\tesla}, \\
-    a_2 &= \SI{1.92 \pm 0.14 e-10}{\mega\hertz\per\tesla}, \\
-    b_2 &= \SI{2.4 \pm 1.7 e-5}{\tesla}.
+    a_1 &= \SI{1.4093 \pm 0.015 e-10}{\mega\hertz\per\tesla}, \\
+    b_1 &= \SI{2.68 \pm 0.09 e-5}{\tesla}, \\
+    a_2 &= \SI{2.066 \pm 0.034 e-10}{\mega\hertz\per\tesla}, \\
+    b_2 &= \SI{2.88 \pm 0.21 e-5}{\tesla}.
 \end{align*}
 
 \begin{table}[H]
@@ -100,16 +101,16 @@ Zur Bestimmung der Landé-Faktoren wird die Gleichung
 nach den Landé-Faktoren $g_F$ umgestellt, wobei $h$ das Plank'sche Wirkungsquantum, $\mu_B$ das Bohr'sche Magneton und $a$ die in \autoref{subsec:Erdmagnetfeld} ausgerechnete Steigung ist.
 Es ergeben sich die folgenden Werte,
 \begin{align*}
-    g_{F_1} &= 0.45696 \pm 0.05285, \\
-    g_{F_2} &= 0.36865 \pm 0.05319.
+    g_{F_1} &= 0.50710 \pm 0.00552, \\
+    g_{F_2} &= 0.34578 \pm 0.00571.
 \end{align*}
 
 \noindent
 Der Kernspin lässt sich mithilfe der Gleichung (\ref{eq:gf}) berechnen. Mit den Quantenzahlen $J=S=\frac 12$ und $L=0$ für Rubidium \cite{Anleitung21} ergeben sich die folgenden
 Kernspins für die jeweiligen Isotope
 \begin{align*}
-    I_1 &= 2.05312 \pm 0.29526, \\
-    I_2 &= 2.66466 \pm 0.45657.
+    I_1 &= 1.80066 \pm 0.02505, \\
+    I_2 &= 2.87399 \pm 0.05568.
 \end{align*}
 
 \subsection{Bestimmung des Isotopenverhältnisses}
@@ -137,9 +138,9 @@ Es folgt demnach ein Isotopenverhältnis von $\SI{40}{\percent}$.
 \label{subsec:quadrZeeman}
 
 Die Energiedifferenzen der Niveaus beim quadratischen Zeeman-Effekt werden mit der Gleichung (\ref{eq:quadratisch}) berechnet.
-Mit den maximalen Magnetfeldern für die jeweiligen Resonanzstellen $B_1 = \SI{190.5226}{\micro\tesla}$ und $B_2 = \SI{230.4972}{\micro\tesla}$ folgt mit $m_F=2$ für $^{87}\text{Rb}$
+Mit den maximalen Magnetfeldern für die jeweiligen Resonanzstellen $B_1 = \SI{168.0873}{\micro\tesla}$ und $B_2 = \SI{230.4972}{\micro\tesla}$ folgt mit $m_F=2$ für $^{87}\text{Rb}$
 und $m_F = 2$ für $^{85}\text{Rb}$ und der Hyperfeinstrukturaufspaltung, die sich aus Gleichung (\ref{eq:thermisch}) ergibt,
 \begin{align*}
-    W_1 &= \SI{5.0+-0.6 e-09}{\eV}, \\
-    W_2 &= \SI{4.9+-0.7 e-09}{\eV}.
+    W_1 &= \SI{4.93 \pm 0.05 e-09}{\eV}, \\
+    W_2 &= \SI{4.60 \pm 0.08 e-09}{\eV}.
 \end{align*}

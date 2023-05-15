@@ -7,7 +7,12 @@ from uncertainties import ufloat
 from sympy import symbols, solve
 import uncertainties.unumpy as unp
 
+"""
 
+In den Daten gab es ein paar Ausreißer, die ich nach der ersten Korrektur rausgenommen habe.
+Ich habe sie in den Daten einfach rausgenommen und unten einmal definiert.
+
+"""
 # Daten und Konstanten importieren / definieren
 x = np.linspace(0.1*10**6,1*10**6,1000)
 
@@ -46,6 +51,25 @@ B_2 = B(data2['B_sweep'], N_sweep, R_sweep) + B(data2['B_horizontal'], N_horizon
 B_vertikal = B(235, N_vertiakl, R_vertikal)
 
 
+# Ausreißer definieren
+def ausreisser(sweep, horizontal):
+    horizontal *= 10**(-3)
+    return (B(sweep, N_sweep, R_sweep) + B(horizontal, N_horizontal, R_horizontal))
+
+
+Isof1 = 0.8 * 10 **6                             # Ausreißer des ersten Isotopes -> Frequenz
+Isof2 = np.array([0.5 * 10 **6, 0.8 * 10 **6])  # des zweiten
+
+IsoB1 = ausreisser(0.909, 154.7)
+IsoB2 = np.array([ausreisser(0.065, 77.7), ausreisser(0.476, 126.6)])
+
+
+# print('Ausreißer1: ', Isof1, IsoB1)
+# print('Ausreißer2: ', Isof2, IsoB2)
+# print('Richtige Werte1: ', data1.head())
+# print('Richtige Werte2: ', data2.head())
+
+
 def f(x,m,b):   #Funktion für die lineare Ausgleichsgerade
     return (m*x+b)
 
@@ -56,7 +80,8 @@ errorsB1 = np.sqrt(np.diag(pcovB1))
 mB1 = ufloat(paramsB1[0], errorsB1[0])
 bB1 = ufloat(paramsB1[1], errorsB1[1])
 plt.plot(data1['f'], B_1, 'bx',label='Messdaten')
-plt.plot(x, f(x, *paramsB1), "b--", label="lineare Regression")
+plt.plot(x, f(x, *paramsB1), "r--", label="lineare Regression")
+plt.plot(Isof1, IsoB1, 'gx')
 
 plt.xlim(0.1*10**6,1*10**6) #Plot schoener machen
 plt.xticks(np.linspace(0.1*10**6,1*10**6,10),[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
@@ -74,8 +99,9 @@ paramsB2, pcovB2 = op.curve_fit(f, data2['f'], B_2)
 errorsB2 = np.sqrt(np.diag(pcovB2))
 mB2 = ufloat(paramsB2[0], errorsB2[0])
 bB2 = ufloat(paramsB2[1], errorsB2[1])
-plt.plot(data2['f'], B_2, 'rx',label='Messdaten')
+plt.plot(data2['f'], B_2, 'bx',label='Messdaten')
 plt.plot(x, f(x, *paramsB2), "r--", label="lineare Regression")
+plt.plot(Isof2, IsoB2, 'gx')
 
 plt.xlim(0.1*10**6,1*10**6) #Plot schoener machen
 plt.xticks(np.linspace(0.1*10**6,1*10**6,10),[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
@@ -113,6 +139,7 @@ Isotopenverhältnis = Oszillos1/Oszillos2
 U1 = g1*mu_b*np.max(B_1)+g1**2*mu_b**2*np.max(B_1)**2*(1-2*2)/(4.53e-24) # Zeeman-Aufspaltung
 U2 = g2*mu_b*np.max(B_2)+g2**2*mu_b**2*np.max(B_2)**2*(1-2*3)/(2.01e-24)
 
+"""
 
 print('--------------')
 print('Ausgerechnete Werte: ', '\n')
@@ -127,8 +154,8 @@ print("Verhältnis 1/2: ", g)
 print('g_j = ', '\t', gJ)
 print('Kernspin_1= ', '\t', f'{I1:.5f}')
 print('Kernspin_2= ', '\t', f'{I2:.5f}')
-print('Abweichung Kernspin1: ', f'{(I1/2.5):.5f}')
-print('Abweichung Kernspin1: ', f'{(I2/1.5):.5f}')
+print('Abweichung Kernspin1: ', f'{abs(1-I1/1.5):.5f}')
+print('Abweichung Kernspin1: ', f'{abs(1-I2/2.5):.5f}')
 print('Isotopenverhältnis I_1/I_2 = ', Isotopenverhältnis, '\n')
 print('--------------')
 print('Quadratische Zeeman-Aufspaltung')
@@ -144,3 +171,5 @@ print('--------------', '\n')
 # for i in range(10):   
 #     print(data1.iloc[i, 0], ' & ', np.round(data1.iloc[i, 1], 4), ' & ', np.round(data1.iloc[i, 2],3), ' k')
     # print(data2.iloc[i, 0], ' & ', np.round(data2.iloc[i, 1], 4), ' & ', np.round(data2.iloc[i, 2],3), ' k')
+
+"""
