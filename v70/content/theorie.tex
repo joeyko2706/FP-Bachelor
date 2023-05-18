@@ -1,0 +1,58 @@
+\section{Ziel}
+\label{sec:Ziel}
+
+Ziel des Versuches ist es die Grundlagen der Vakuumphysik zu erlernen. Dafür wird eine Evakuierungskurve für zwei verschiedene Pumpartypen, einer Drehschieberpumpe
+und einer Turbomolekularpumpe, durchgeführt. Es wird außerdem das effektive Saugvermögen beider Pumpen bestimmt.
+
+\section{Theorie}
+\label{sec:Theorie}
+
+\subsection{Theorie des Vakuum}
+\label{subsec:vakuum}
+
+Als Vakuum wird der Zustand eines Gases bezeichnet, wenn der Druck innerhalb dieses Behälters unterhalb dem Druck außerhalb ist. Genauer wird das Vakuum als Druckbereich unterhalb
+$\SI{300}{\milli\bar}$ bezeichnet, dem geringstmöglichen Druck auf der Erdoberfläche. Eine Möglichkeit Vakuen zu definieren ist über die mittlere freie Weglänge $\bar l$, die die
+Strecke beschreibt, bis ein Teilchen im Mittel auf ein anderes trifft. Sie ist definiert als
+\begin{align}
+    \bar l = \frac{k_B T}{\sqrt 2 \pi\cdot p d_m^2},
+\end{align}
+wobei $d_m$ der Moleküldurchmesser, $p$ der Druck, $k_B$ die Boltzmann-Konstante und $T$ die Temperatur ist.
+Das Vakuum ist dabei in verschiedene Teilbereiche einzuordnen, die in Abhängigkeit vom Druck
+und der mittleren freien Weglänge $\bar l$, in \autoref{tab:Vakuen} aufgetragen sind.
+
+\begin{table}[H]
+    \centering
+    \caption{Druckbereiche in der Vakuumtechnik \cite{EinfuehrungVakuum}.}
+    \label{tab:Vakuen}
+    \begin{tabular}{c c c}
+        \toprule
+        Druckbereich & Druck / hPa &  \\
+        \midrule
+        Atmosphärendruck    & $1.013,25$    & $6,8\cdot10^{-8}$   \\
+        Grobvakuum (GV)     & $300 - 1$     & $10^{-8}-10^{-4}$   \\
+        Feinvakuum (FV)     & $1 - 10^{-3}$ & $10^{-4} - 10^{-1}$ \\
+        Hochvakuum (HV)     & $10^{-3} - 10^{-8}$ & $10^{-1} - 10^{4}$ \\
+        Ultrahochvakuum (UHV) & $10^{-8} - 10^{-11}$ & $10^{4} - 10^{7}$ \\
+        Extrem hohes Vakuum (XHV) & $<10^{-11}$ & $<10^{-7}$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Der Druck wird mithilfe der barometrischen Höhenformel beschrieben,
+\begin{align}
+    \label{eqn:baroFormel1}
+    p_h = p_0\cdot \exp\left({-\frac{\rho_o gh}{p_0}}\right).
+\end{align}
+Dabei ist $p_h$ der Druck bei der Höhe $h$, $p_0$ der Atmosphärendruck auf Meereshöhe (\SI{1013,25}{\hecto\pascal}), $g$ die Erdbeschleunigung und $\rho_0$ die Dichte der Luft
+auf Meereshöhe bei $\SI{0}{\celsius} = \SI{1,293}{\kilo\gram\per\meter\cubed}$. Die Formel (\ref{eqn:baroFormel1}) beschreibt den Druck als das Gewicht der über einer Fläche
+stehenden Luftsäule. 
+Wird angenommen, das die Dichte der Luft, die Erdbeschleunigung und der Atmosphärendruck auf Meereshöhe konstant sind, folgt eine vereinfachte Darstellung der barometrischen
+Höhenformel,
+\begin{align}
+    \label{eqn:baroFormel2}
+    p_h = p_0\cdot\exp\left(-\frac{h}{\SI{8,005}{\meter}}\right).
+\end{align}
+
+\subsection{Das ideale Gas}
+\label{subsec:idGas}
+
