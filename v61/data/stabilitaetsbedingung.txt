@@ -1,4 +1,4 @@
-Abstand [cm] & Intensität [mW] 
+Abstand [cm] ; Intensität [mW] 
 50; 6.13
 75; 5.15
 100; 5.10

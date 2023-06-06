@@ -11,12 +11,16 @@ from uncertainties.unumpy import (nominal_values as noms,
                                   std_devs as stds)
 
 
-tem = pd.read_csv('data/TEM-Moden.txt', delimiter=';', header=1)
-pol = pd.read_csv('data/Polarisation.txt', delimiter=';', header=1)
-stabi = pd.read_csv('data/stabilitaetsbedingung.txt', delimiter=';', header=1)
+tem = pd.read_csv('data/TEM-Moden.txt', delimiter=';', header=0 )
+pol = pd.read_csv('data/Polarisation.txt', delimiter=';', header=0 )
+stabi = pd.read_csv('data/stabilitaetsbedingung.txt', delimiter=';', header=0)
 tem.columns = ['Position', 'I_Mode1', 'I_Mode0'] 
 pol.columns = ['Winkel', 'Intensitaet']
 stabi.columns = ['Abstand', 'Intensitaet']
+
+# print(tem)
+# print(pol)
+# print(stabi)
 
 
 def schoenerPlot():
@@ -46,8 +50,8 @@ w_1 =unp.uarray(parameters1[2],pcov1[2,2])
 
 plt.plot(x,model1(x, *parameters1), label="Fit", color='red')
 plt.plot(tem['Position'], tem['I_Mode0'], 'x', label='Mode')
-plt.xlabel(r'$d \,/\,\unit{\milli\metre}$')
-plt.ylabel(r'$I \,/\,\unit{\micro\watt}$')
+# plt.xlabel(r'$d \,/\,\unit{\milli\metre}$')
+# plt.ylabel(r'$I \,/\,\unit{\micro\watt}$')
 plt.xlim(-10,15)
 schoenerPlot()
 plt.savefig("build/plot.pdf")
@@ -56,7 +60,7 @@ plt.clf()
 
 # Plotte/Fitte die erste Mode
 tem['Position'] -=5
-x = np.linspace(-15,10,1000)
+x = np.linspace(-15,10,10000)
 parameters2, pcov2 = curve_fit(model2, tem['Position'], tem['I_Mode1'], sigma=None)
 I1= unp.uarray(parameters2[0], pcov2[0,0])
 x0_2 =unp.uarray(parameters2[1],pcov2[1,1])
@@ -65,8 +69,9 @@ w_2 =unp.uarray(parameters2[2],pcov2[2,2])
 
 plt.plot(x,model2(x, *parameters2), label='Fit', color='red')
 plt.plot(tem['Position'], tem['I_Mode1'], 'x', label='Mode')
-plt.xlabel(r'$d \,/\,\unit{\milli\metre}$')
-plt.ylabel(r'$I \,/\,\unit{\micro\watt}$')
+# plt.xlabel(r'$d \,/\,\unit{\milli\metre}$')
+# plt.ylabel(r'$I \,/\,\unit{\micro\watt}$')
+plt.xticks([-15,-10,-5,0,5,10], [-10,-5,0,5,10,15])
 plt.xlim(-15,10)
 schoenerPlot()
 plt.savefig("build/plot1.pdf")
@@ -80,9 +85,63 @@ xticks = np.linspace(0,360,5)
 plt.plot(pol['Winkel'], pol['Intensitaet'], 'x', label='Werte')
 plt.plot(x, poli(x, *parameters3), 'r', label='Fit')
 plt.xticks(xticks, ['0', r'$\frac{\pi}{4}$', r'$\frac{\pi}{2}$', r'$\frac{3\pi}{2}$', r'$2\pi$'])
-plt.xlabel(r'$\varphi \,/\,\unit{\radian}$')
-plt.ylabel(r'$I \,/\,\unit{\micro\watt}$')
+# plt.xlabel(r'$\varphi \,/\,\unit{\radian}$')
+# plt.ylabel(r'$I \,/\,\unit{\micro\watt}$')
 plt.xlim(0,360)
 schoenerPlot()
 plt.savefig("build/plot2.pdf")
 plt.clf()
+
+# ----------------------------
+####### Berechnungen #########
+
+
+def wellenlaenge(b, n, d, L):
+    return ( b/n * np.sin(np.arctan(d/(2*L))) )
+
+
+gitter1 = np.array([2.4, 5.0, 7.7, 10.5, 13.1, 16.0, 19.0, 22.0])
+gitter2 = np.array([3.2, 6.4, 9.9, 13.2, 16.9, 20.8, 24.9, 29.7])
+gitter3 = np.array([8.5, 25.3])
+gitter4 = 25.2
+
+# berechne die Wellenlängen des ersten Gitters und trage sie im entsprechenden array ein
+b = 1/80 * 10**(-3)
+L = 63.4 * 10**(-2)
+wellenlaenge1 = np.ones(len(gitter1))
+counter = 1
+for i in gitter1:
+    wellenlaenge1[counter-2] = wellenlaenge(b,counter, i*10**(-2), L)
+    counter += 1
+
+
+# berechne die Wellenlängen des zweiten Gitters und trage sie im entsprechenden array ein
+b = 1/100 * 10**(-3)
+wellenlaenge2 = np.ones(len(gitter2))
+counter = 1
+for i in gitter2:
+    wellenlaenge2[counter-2] = wellenlaenge(b,counter, i*10**(-2), L)
+    counter += 1
+
+# berechne die Wellenlängen des dritten Gitters und trage sie im entsprechenden array ein
+b = 1/600 * 10**(-3)
+wellenlaenge3 = np.ones(len(gitter3))
+L = 47.75 *10*(-2)
+counter = 1
+for i in gitter3:
+    wellenlaenge3[counter-2] = wellenlaenge(b,counter, i*10**(-2), L)
+    counter += 1
+
+# berechne die Wellenlängen des vierten Gitters und trage sie im entsprechenden array ein
+b = 1/1200 * 10**(-3)
+wellenlaenge4 = wellenlaenge(b,1, gitter4*10**(-2), L)
+
+print('Wellenlaenge 1:', wellenlaenge1, '\n', 'Mittelwert1:', np.mean(wellenlaenge1), '\n')
+print('Wellenlaenge 2:', wellenlaenge2, '\n', 'Mittelwert2:', np.mean(wellenlaenge2), '\n')
+print('Wellenlaenge 3:', wellenlaenge3, '\n', 'Mittelwert3:', np.mean(wellenlaenge3), '\n')
+print('Wellenlaenge 4:', wellenlaenge4, '\n')
+
+print('_--------------------')
+
+for i in range(8):
+    print(wellenlaenge1[i])

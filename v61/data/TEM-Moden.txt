@@ -1,4 +1,4 @@
-Position [mm] & Intensität Mode 1[µW] & Intensität Mode 0 [µW]
+Position [mm] ; Intensität Mode 1[µW] ; Intensität Mode 0 [µW]
 -10; 0.26; 0.0
 -9; 0.45; 0.0
 -8; 0.60; 0.0

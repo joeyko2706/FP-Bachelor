@@ -11,7 +11,76 @@ voneinander betrachtet werden, im Versuch war es jedoch nicht möglich einen Las
   \label{fig:plot}
 \end{figure}
 
+\subsection{Wellenlängenbestimmung}
+\label{subsec:wellen}
 
+Die zur Bestimmung der Wellenlänge des HeNe-Lasers aufgenommenen Messwerte sind in \autoref{tab:wellen} abgebildet, wobei für die unterschiedlichen Gitter die Abstände zum Hauptmaximum aufgetragen wurden.
+Das erste Gitter wird mit $d_1$ gekennzeichnet und hat $(80\, \text{Linien}\,/\,\si{\milli\meter})$, das zweite hat $(100\, \text{Linien}\,/\,\si{\milli\meter})$, das dritte $(600\, \text{Linien}\,/\,\si{\milli\meter})$ und das
+vierte Gitter besitzt $(1200\, \text{Linien}\,/\,\si{\milli\meter})$
+Die Abstände der ersten beiden Gitter zum Schirm betragen sind jeweils die gleichen und betragen am linken Rand $L_1=\SI{67.5}{\centi\meter}$ und am rechten Rand $L_1=\SI{59.3}{\centi\meter}$, woraus sich ein
+durchschnittlicher Schrimabstand $L$ von $L=\SI{63.4}{\centi\meter}$ ergibt.
+Für die letzten beiden Gitter jewils erneut die gleichen und betragen am linken Rand $L_1=\SI{58}{\centi\meter}$ und am rechten Rand $L_1=\SI{37.5}{\centi\meter}$, woraus sich der
+durchschnittlicher Schrimabstand $L$ von $L=\SI{47.75}{\centi\meter}$ ergibt.
+
+
+\begin{table}[H]
+  \centering
+  \caption{Daten der Interferenzmaxima der jeweiligen Gitter.}
+  \label{tab:wellen}
+  \begin{tabular}{c c c c c}
+      \toprule
+      Maximum & $d_1/\,\si{\centi\meter}$ & $d_2/\,\si{\centi\meter}$ & $d_3/\,\si{\centi\meter}$ & $d_4/\,\si{\centi\meter}$ \\
+      \midrule
+      1 & 2,4 & 3,2 & 8,5 & 25,2\\  
+      2 & 5,0 & 6,4 & 25,3 &    \\  
+      3 & 7,7 & 9,9 &       &   \\  
+      4 & 10,5 & 13,2 &     &   \\
+      5 & 13,1 & 16,9 &     &   \\
+      6 & 16,0 & 20,8 &     &   \\
+      7 & 19,0 & 24,9 &     &   \\
+      8 & 22,0 & 29,7 &     &   \\
+      \bottomrule
+  \end{tabular}
+\end{table}
+
+\noindent
+Die Wellenlängen ergeben sich über die folgende Relation,
+\begin{align}
+  \lambda = \frac{b}{n}\cdot\sin\left[\tan^{-1}\left(\frac{d_n}{L}\right)\right].
+\end{align}
+
+\noindent
+Hierbei ist $n$ die Ordnung des Maximums, $b$ die Gitterbreite, $d$ den Abstand vom $n$-ten Maximum zum Hauptmaximum und $L$ den Abstand zwischen dem Gitter und dem Schirm.
+Die Wellenlängen, die sich aus den Werten aus \autoref{tab:wellen} ergeben, sind in \autoref{tab:wellenlaengen} eingetragen.
+
+\begin{table}[H]
+  \centering
+  \caption{Wellenlängen der Interferenzmaxima der jeweiligen Gitter.}
+  \label{tab:wellenlaengen}
+  \begin{tabular}{c c c c c}
+      \toprule
+      Maximum & $\lambda_1 \,/\,\si{nm}$ & $\lambda_2 \,/\,\si{nm}$ & $\lambda_3 \,/\,\si{nm}$ & $\lambda_4 \,/\,\si{nm}$\\
+      \midrule
+      1 & 246.26 & 3,2   & 8,5   & 25,2  \\  
+      2 & 252.558 & 6,4   & 25,3  &       \\  
+      3 & 257.89 & 9,9   &       &       \\  
+      4 & 256.91 & 13,2 &       &       \\
+      5 & 260.81 & 16,9 &       &       \\
+      6 & 264.62 & 20,8 &       &       \\
+      7 & 267.11 & 24,9 &       &       \\
+      8 & 236.51 & 29,7 &       &       \\
+      \bottomrule
+  \end{tabular}
+\end{table}
+
+
+
+Die Mittelwerte ergeben sich zu,
+\begin{align}
+  \overline{\lambda_1} &= \SI{255.34}{\nano\meter}, \\
+  \overline{\lambda_2} &= \SI{639.65}{\nano\meter}, \\
+  \overline{\lambda_3} &= \SI{266.73}{\nano\meter}, \\
+\end{align}
 
 \subsection{Stabilitätsbedingung}
 \label{subsec:Stabilitätsbedingung}
@@ -29,5 +98,3 @@ Als erstes wird die Stabilitätsbedingung ausgewertet, wozu aus Gleichung (HIER 
 \label{subsec:Frequenzbreite}
 
 
-\subsection{Wellenlängenbestimmung}
-\label{subsec:wellen}

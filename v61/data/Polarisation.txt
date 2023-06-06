@@ -1,4 +1,4 @@
-Winkel [DEG] & Intensität [µW]
+Winkel [DEG] ; Intensität [µW]
 0  ; 0.015
 10 ; 0.2
 20 ; 0.6
