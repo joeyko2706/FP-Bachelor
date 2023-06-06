@@ -109,28 +109,28 @@ gitter4 = 25.2
 b = 1/80 * 10**(-3)
 L = 63.4 * 10**(-2)
 wellenlaenge1 = np.ones(len(gitter1))
-counter = 1
+n = 1
 for i in gitter1:
-    wellenlaenge1[counter-2] = wellenlaenge(b,counter, i*10**(-2), L)
-    counter += 1
+    wellenlaenge1[n-2] = wellenlaenge(b,n, i*10**(-2), L)
+    n += 1
 
 
 # berechne die Wellenlängen des zweiten Gitters und trage sie im entsprechenden array ein
 b = 1/100 * 10**(-3)
 wellenlaenge2 = np.ones(len(gitter2))
-counter = 1
+n = 1
 for i in gitter2:
-    wellenlaenge2[counter-2] = wellenlaenge(b,counter, i*10**(-2), L)
-    counter += 1
+    wellenlaenge2[n-2] = wellenlaenge(b,n, i*10**(-2), L)
+    n += 1
 
 # berechne die Wellenlängen des dritten Gitters und trage sie im entsprechenden array ein
 b = 1/600 * 10**(-3)
 wellenlaenge3 = np.ones(len(gitter3))
 L = 47.75 *10*(-2)
-counter = 1
+n = 1
 for i in gitter3:
-    wellenlaenge3[counter-2] = wellenlaenge(b,counter, i*10**(-2), L)
-    counter += 1
+    wellenlaenge3[n-2] = wellenlaenge(b,n, i*10**(-2), L)
+    n += 1
 
 # berechne die Wellenlängen des vierten Gitters und trage sie im entsprechenden array ein
 b = 1/1200 * 10**(-3)
@@ -140,8 +140,3 @@ print('Wellenlaenge 1:', wellenlaenge1, '\n', 'Mittelwert1:', np.mean(wellenlaen
 print('Wellenlaenge 2:', wellenlaenge2, '\n', 'Mittelwert2:', np.mean(wellenlaenge2), '\n')
 print('Wellenlaenge 3:', wellenlaenge3, '\n', 'Mittelwert3:', np.mean(wellenlaenge3), '\n')
 print('Wellenlaenge 4:', wellenlaenge4, '\n')
-
-print('_--------------------')
-
-for i in range(8):
-    print(wellenlaenge1[i])
