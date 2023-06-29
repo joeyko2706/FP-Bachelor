@@ -10,8 +10,8 @@ und einer Turbomolekularpumpe, durchgeführt. Es wird außerdem das effektive Sa
 \subsection{Theorie des Vakuum}
 \label{subsec:vakuum}
 
-Als Vakuum wird der Zustand eines Gases bezeichnet, wenn der Druck innerhalb dieses Behälters unterhalb dem Druck außerhalb ist. Genauer wird das Vakuum als Druckbereich unterhalb
-$\SI{300}{\milli\bar}$ bezeichnet, dem geringstmöglichen Druck auf der Erdoberfläche. Eine Möglichkeit verschiedene Bereiche von Vakuen zu beschreiben ist über die mittlere freie Weglänge $\bar l$, die die
+(Nach \cite{EinfuehrungVakuum}) Als Vakuum wird der Zustand eines Gases bezeichnet, wenn der Druck innerhalb dieses Behälters unterhalb dem Druck außerhalb ist. Alternativ wird das Vakuum als Druckbereich unterhalb
+$\SI{300}{\milli\bar}$ bezeichnet, dem geringstmöglichen Druck auf der Erdoberfläche (\cite{Vakuumtechnik}). Eine Möglichkeit verschiedene Bereiche von Vakuen zu beschreiben ist über die mittlere freie Weglänge $\bar l$, die die
 Strecke beschreibt, bis ein Teilchen im Mittel auf ein anderes trifft. Sie ist definiert als
 \begin{align}
     \bar l = \frac{k_B T}{\sqrt 2 \pi p d_m^2},
@@ -26,7 +26,7 @@ und der mittleren freien Weglänge $\bar l$, in \autoref{tab:Vakuen} aufgetragen
     \label{tab:Vakuen}
     \begin{tabular}{c c c}
         \toprule
-        Druckbereich & Druck / hPa &  mittlere freie Weglänge $\bar l$\\
+        Druckbereich & Druck / hPa &  mittlere freie Weglänge $\bar l$ / m\\
         \midrule
         Atmosphärendruck    & $1.013,25$    & $6,8\cdot10^{-8}$   \\
         Grobvakuum (GV)     & $300 - 1$     & $10^{-8}-10^{-4}$   \\
@@ -56,11 +56,11 @@ Höhenformel,
 \subsection{Das ideale Gas}
 \label{subsec:idGas}
 
-Das Modell des idealen Gases ist eine vereinfachende Beschreibung für Gasprozesse. Die idealen Gasteilchen sind dabei frei und üben keine Anziehungs- oder Abstoßungskräfte 
-aufeinander aus. Es finden lediglich elastische Stöße zwischen der Wand des Behälters, in dem sich das Gas befindet, und zwischen den Teilchen selber auf. Die Teilchen selber
-belegen dabei aber kein Volumen und können sich auch nicht rotieren und nicht bewegen. Die kinetische Energie der Gasteilchen ist ausschließlich die translatorische Bewegung
+Das Modell des idealen Gases ist eine vereinfachende Beschreibung für reale Gase. Die idealen Gasteilchen sind dabei frei und üben keine Anziehungs- oder Abstoßungskräfte 
+aufeinander aus. Es finden lediglich elastische Stöße zwischen der Wand des Behälters, in dem sich das Gas befindet, und zwischen den Teilchen selber statt. Die Teilchen selber
+belegen dabei aber kein Volumen und können nicht rotieren oder vibrieren. Die kinetische Energie der Gasteilchen ist ausschließlich die translatorische Bewegung
 im Raum. \newline
-(Nach Quelle \cite{EinfuehrungVakuum}) Aus dem Boyle-Mariott'schen Gesetz $pV=const$ folgt, dass das Volumen einer Gasmenge bei konstanter Temperatur umgekehrt proportional zum Druck
+(Nach \cite{EinfuehrungVakuum}) Aus dem Boyle-Mariott'schen Gesetz $pV=const$ folgt, dass das Volumen einer Gasmenge bei konstanter Temperatur umgekehrt proportional zum Druck
 ist. Gemeinsam mit dem Gay-Lussac'schen Gesetz $V=const\cdot T$, der Stoffmenge, der allgemeinen Gaskonstanten mit der Avogrado-Konstanten, die die Boltzmann-Konstante bilden,
 folgt die allgemeine Gasgleichung,
 \begin{align}
@@ -72,7 +72,7 @@ Dabei ist $p$ der Druck, $V$ das Volumen, der Teilchenzahl $N$ und $T$ die Tempe
 \subsection{Strömungsarten}
 \label{subsec:stroemungsarten}
 
-Wenn von der Bewegung von flüssiger oder gasförmiger Teilchenmassen gesprochen wird, wird zwischen verschiedenen Arten der Bewegung unterschieden, den Strömungsarten. Das Verhältnis 
+Wenn von der Bewegung von flüssigen oder gasförmigen Teilchenmassen gesprochen wird, wird zwischen verschiedenen Arten der Bewegung unterschieden, den Strömungsarten. Das Verhältnis 
 von mittlerer freier Weglänge $\bar l$ und dem Druchmesser $d$ des Strömungskanals wird zur Beschreibung von Strömungsarten verwendet und als Knudsenzahl bezeichnet,
 \begin{align}
     Kn = \frac{\bar l}{d}.
@@ -90,7 +90,7 @@ eingezeichnet.
 
 \noindent
 Bei viskosen Strömungen wird zusätzlich zwischen laminaren und turbulenten Strömungen unterschieden. Laminare Strömungen werden auch als Schichtströmungen bezeichnet, da die Gasteilchen immer in gleichen, parallelen Schichten
-zueinander transportiert werden. Wenn die Strömungsgeschwindigkeit steigt, dann lösen sich die Schichten der Gasteilchen auf und die Teilchen sind vollkommen ungeordnet. Es wird von einer turbulenten Strömung gesprochenn.
+zueinander transportiert werden. Wenn die Strömungsgeschwindigkeit steigt, dann lösen sich die Schichten der Gasteilchen auf und die Teilchen sind vollkommen ungeordnet. Es wird von einer turbulenten Strömung gesprochen.
 Die Grenze zwischen laminarer und turbulenter Strömung ist ein kontinuierlicher, der mathematisch durch die Reynoldszahl $Re$ beschrieben wird. Sie berechnet sich über die Dichte des Fluids $\rho$, die Strömungsgeschwindigkeit $\nu$,
 die charakteristische Länge $l$ und die dynamische Viskosität $\eta$ über
 \begin{align}
@@ -113,10 +113,10 @@ In den zu vakuumierenden Behältern sind häufig Verunreinigungen. Das können R
 und Dichtungen sein. Es können auch Stäube und Partikel zurückbleiben, die das System verunreinigen. Abscheidungen flüssiger oder fester Stoffe aus der Gaphase, die als Kondensationen
 bezeichnet werden, setzen sich an den Behälterwänden ab. Die größte Verunreinigung ist dabei das kondensierter Wasserdampf aus der Umgebungsluft, welches sich an den Behälterwänden absetzt. 
 Raumluft enthält in etwa $\SI{10}{\gram}$ Wasserdampf pro Kubikmeter, weshalb es sich an allen Oberflächen festsetzt. \newline
-Verunreinigungen sind deshalb ein Problem, weil sie, auch wenn bereits der Großteil des Gases abgepumpt wurde, gelöst werden und somit der Druck nicht auf das gewünschte
+Verunreinigungen sind deshalb ein Problem, weil sie, auch wenn bereits der Großteil des Gases abgepumpt wurde, von den Wänden gelöst werden und somit der Druck nicht auf das gewünschte
 Arbeitsniveau sinken kann.
 
-\subsection{Saugleistung einer Vakuumpumpe}
+\subsection{Saugvermögen und Saugleistung einer Vakuumpumpe}
 \label{subsec:Saugleistung}
 
 \noindent
@@ -136,6 +136,17 @@ die, dividiert durch den Eingangsdruck, das Saugvermögen ergibt,
     S=\frac{\text dV}{\text dt}.
 \end{align}
 
+\noindent
+Wird ein konstantes Saugvermögen angenommen, so kann durch das Ableiten der allgemeinen Gasgleichung (\ref{eqn:allgGasgl}) nach der Zeit $t$ die folgende Differentialgleichung aufgestellt werden
+\begin{align}
+    \dot pV=-pS,
+\end{align}
+dessen Lösung die Evakuierungskurve $p(t)$ ist, die den zeitlichen Verlauf des Druckes gemäß
+\begin{align}
+    p(t)=p_0\cdot\exp\left(-\frac{S}{V}\cdot t\right)
+\end{align}
+beschreibt.
+
 \subsection{Leckrate}
 \label{subsec:leckrate}
 
@@ -149,7 +160,7 @@ wobei $p_a$ der Druck außerhalb des Behälters, $A$ die Oberfläche des Behält
 \begin{align}
     Q_L=\frac{\upDelta p V}{\upDelta t}.
 \end{align}
-Die Druckänderung während der Messzeit ist dabei mit $\upDelta p$ bezeichnet worden, $V$ ist das Volumen und $\upDelta t$ die Messzeit.
+Die Druckänderung während der Messzeit ist dabei mit $\upDelta p$ bezeichnet worden, $V$ ist das Volumen des Behälters und $\upDelta t$ die Messzeit.
 
 \subsection{Drehschiebervakuumpumpe}
 \label{subsec:Drehschieberpumpe}
@@ -166,7 +177,7 @@ Die Druckänderung während der Messzeit ist dabei mit $\upDelta p$ bezeichnet w
 \noindent
 Der Rotor und der Schieber teilen den Arbeitsraum in zwei separate Räume mit variierbarem Volumen. Wenn sich der Rotor dreht, dann strömt Gas in den Schöpfraum, bis er durch den zweiten Schieber abgesperrt wird. Das eingeschlossene Gas wird dann so lange komprimiert, bis es durch den zweiten Schieber 
 abgeschlossen wird und sich das Auslassventil gegen den Atmosphärendruck öffnet. Das Auslassventil ist ölüberlagert, wodurch beim Öffnen des Ventils eine kleine Menge Öl in den Schöpfraum dringt und den Schieber gleichzeitig gegen das Gehäuse abdichtet und schmiert.
-Drehschiebervakuumpumpen werden in ein- oder zweistufigen Ausführungen eingebaut und als Vorpumpen verwendet.
+Drehschiebervakuumpumpen werden in ein- oder zweistufigen Ausführungen eingebaut und auch als Vorpumpen verwendet.
 
 \subsection{Turbomolekularpumpe}
 \label{subsec:turbopumpe}
@@ -188,24 +199,60 @@ Ein typischer Verlauf des Saugvermögens in Abhängigkeit des Ansaugdruckes von 
 
 Im folgenden werden die im Versuch verwendeten Vakuummessgeräte nach Quelle \cite{Totaldruckmessung} beschrieben.
 
+\subsubsection{Piezo-Vakuummeter}
+\label{subsubsec:piezo}
+(Nach \cite{Druckmessung}) Ein Piezo-Vakuummeter ist ein direktes, gasartunabhängiges Membran-Vakuummeter. Bei Membran-Vakuummetern wirkt auf eine Membran der Fläche $A$ der Druck $p$ und lenkt die Membran proportional zum Druck aus.
+Im Falle eines Piezo-Vakuummeters wird der Druck durch piezo-resistive oder kapazitive Sensoren in ein elektrisches Signal umgewandelt, indem die Widerstandsänderung infolge der Membranauslenkung gemessen wird.
+Ein schematischer Aufbau eines Piezo-Membranvakuummeters ist in \autoref{fig:piezo} eingezeichnet. Dabei wird der Druck des evakuierten Volumens mit $p$ und der Referenzdruck mit $p_0$ bezeichnet.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{data/piezo-vakuummeter.jpg}
+    \caption{Schematischer Aufbau eines Piezo-Vakuummeters \cite{Druckmessung}.}
+    \label{fig:piezo}
+\end{figure}
+
+
 \subsubsection{Pirani-Messröhre}
 \label{subsubsec:pirani}
 
-Die Pirani-Messröhre ist ein Druckmessgerät für den Grob- und Feinvakuumbereich, also für den Bereich $\SIrange{10}{100}{\hecto\pascal}$. Die Druckmessung beruht auf der linear druckabhängigen Wärmeleitfähigkeit von Gasen. Aufgrund der Aufhängung und der Wärmestrahlung des Drahtes ist der Zusammenhang zwischen 
-Druck und Wärmeleitfähigkeit jedoch nicht überall linear. Bei Verringerung des Gasdruckes wird weniger Wärme abgeführt, wodurch sich die Temperatur des Drahtes und damit sein Widerstand erhöht. Da der Draht an eine Wheatstone'sche Brücke angeschlossen wird, 
-wird ebendiese Differenz im Widerstand gemessen. 
+Die Pirani-Messröhre ist ein Druckmessgerät für den Bereich von $\SIrange{10}{e-2}{\hecto\pascal}$. Die Druckmessung beruht auf der linear druckabhängigen Wärmeleitfähigkeit von Gasen in ebendiesem Druckbereich. Aufgrund der Wärmeleitung über die Aufhängung des Drahtes und der Wärmestrahlung ist der Zusammenhang zwischen 
+Druck und Wärmeleitfähigkeit jedoch nicht überall linear. Bei Verringerung des Gasdruckes wird weniger Wärme abgeführt, wodurch sich die Temperatur des Drahtes und damit sein Widerstand erhöht. 
+Da der Draht an eine Wheatstone'sche Brücke angeschlossen wird, wird ebendiese Differenz im Widerstand gemessen. \newline
+Im Bereich von hohen Drücken trägt die Konvektion zum Wärmeaustausch der Gasmoleküle bei, weshalb die Pirani-Messröhre im Bereich eines hohen Druckes nicht funktioniert. In \autoref{fig:pirani} ist die Funktionsweise einer Pirani-Messröhre aufgetragen.
 
-\subsubsection{Kaltkathoden-Ionisationsvakuumeter}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{data/pirani-messroehre.jpg}
+    \caption{Funktionsweise einer Pirani Messröhre \cite{Totaldruckmessung}.}
+    \label{fig:pirani}
+\end{figure}
+
+\subsubsection{Kaltkathoden-Ionisationsvakuummeter}
 \label{subsubsec:kaltkathode}
 
 Kaltkathodenvakuumeter bestehen aus einer Anode und einer Kathode, zwischen denen über einen Vorwiderstand eine hohe Spannung angelegt wird. Die Elektronen der Kathode werden durch Feldemission emittiert und auf die Anode beschleunigt.
 Dabei ionisieren sie neutrale Gasteilchen, wodurch eine Gasentladung gezündet wird. Dieser Gasentladungsstrom ist ein Maß für den Druck. Da ab $\SI{1}{\hecto\pascal}$ keine Elektronen das Gas ionisieren können,
 wird ein invertierbarer Magnetron installiert. Im Inneren der Anode befindet sich nun ein Magnetfeld, durch das sich die Elektronen auf einer Spiralbahn bewegen, wodurch die Wege der Elektronen verlängert und die Stoßwahrscheinlichkeit somit 
-erhöht wird. Dadurch werden auch unter $\SI{1}{\hecto\pascal}$ noch genügend Ionen erzeugt.
+erhöht wird. Dadurch werden auch unter $\SI{1}{\hecto\pascal}$ noch genügend Ionen erzeugt. In \autoref{fig:magnetron} ist ein invertierbarer Magnetron nach Hobson und Redhead aufgezeichnet.
 
-\subsubsection{Heißkathoden-Ionisationsvakuumeter}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{data/kaltkathode-aufbau.jpg}
+    \caption{Aufbau eines invertierten Magnetrons \cite{Totaldruckmessung}.}
+    \label{fig:magnetron}
+\end{figure}
+
+\subsubsection{Heißkathoden-Ionisationsvakuummeter}
 \label{subsubsec:heißkathode}
 
 Im Gegensatz zu Kaltkathodenvakuumeter werden bei Heißkathodenvakuumeter die Elektronen mithilfe einer beheizten Kathode über den glühelektrischen Effekt erzeugt.
 In der Mitte einer zylindrischen, gitterförmigen Anode ist ein dünner Draht, der die Ionen auffängt. Genau wie bei dem Kaltkathodenvakuumeter werden durch Elektronenstöße Gasmoleküle ionsiert, wodurch 
-Drücke mit hoher Genauigkeit von bis zu $\SI{e-10}{\hecto\pascal}$ gemessen werden können.
+Drücke mit hoher Genauigkeit von bis zu $\SI{e-10}{\hecto\pascal}$ gemessen werden können. \autoref{fig:bayardalpertmessroehre} zeigt den Aufbau einer Messröhre nach Bayard-Alpert.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{data/bayard-alpert-messroehre.jpg}
+    \caption{Aufbau einer Bayard-Alpert Messröhre \cite{Totaldruckmessung}.}
+    \label{fig:bayardalpertmessroehre}
+\end{figure}
