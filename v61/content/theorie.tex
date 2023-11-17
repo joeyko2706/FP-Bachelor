@@ -1,4 +1,73 @@
+\section{Zielsetzung}
+\label{sec:Ziel}
+
+Ziel dieses Versuches ist es den Aufbau und die Funktionsweise eines Helium-Neon Lasers zu beschrieben und näher zu untersuchen.
+Konkret werden seine Stabilität, zwei TEM-Moden, seine Polarisation und seine Wellenlänge gemessen.
+
 \section{Theorie}
 \label{sec:Theorie}
 
-\cite{sample}
+
+\subsection{Grundlagen des He-Ne Lasers}
+
+Jeder Laser besteht aus drei Kernkomponenten. Diese sind ein aktives Medium, eine Pumpquelle und ein optischer Resonator. Beim He-Ne Laser besteht das aktive Medium
+aus einem Helium-Neon Gemisch mit einem Verhältnis von 5 zu 1. Als Pumpquelle wird an das Gemisch eine Spannung angelegt. Durch Wechselwirkungen mit den Elektronen werden
+die Atome im aktiven Medium angeregt. Diese angeregten Zustände sind im Helium wesentlich langlebiger als im Neon. Die Heliumatome sind in der Lage ihren angeregten Zustand
+durch einen Stoß an die Neonatome zu übertragen. Dies führt dazu, dass man den gewünschten Zustand erreicht, in dem sich mehr Elektronen im Neon in einem höheren Energieniveau
+befinden als im Niedrigeren. Dieser Zustand wird Besetzungsinversion genannt.
+\newline
+Für die Elektronen im höheren Niveau gibt es nun zwei Möglichkeiten in ein niedrigeres Niveau zurück zu kommen. Diese werden spontane Emission und stimulierte Emission gennant.
+Wie der Name vermuten lässt, können Elektronen spontan, also lediglich durch Quantenflktuation, in ein niedrigeres Energieniveau zurück fallen.
+Dabei emitieren sie ein Photon mit einer Energie, die der Differenz der beiden Niveaus entspricht. Die Richtung in die das Photon emittiert wird ist hierbei beliebig.
+\newline
+Auch bei der stimulierten Emission wechselt das Elektron vom höheren ins niedrigere Energieniveau. Der Unterschied ist, dass dieser Vorgang durch ein einfallendes Photon ausgelößt
+wird. Voraussetzung hierfür ist, dass die Energie des Photons der Differenz der Energieniveaus entspricht. Bei der stimulierten Emission wird ebenfalls ein Photon der selben Energie
+emittiert, dieses bewegt sich jedoch immer parallel zum einfallenden Photon. Aus diesem Grunde ist es für die gewünschte Verstärkung des Lasers notwendig, dass die stimulierten
+Emissionen der dominante Prozess sind.
+\newline
+\newline
+Als optischer Resonator werden beim He-Ne Laser zwei Spiegel verwendet. Einer der Spiegel ist teildurchlässig, damit der Laserstrahl zu einer Seite hin ausgekoppelt werden kann.
+Hiefür können die Spiegel sowohl planparallelen, als auch sphärischen sein. Auch eine Kombination ist möglich. Die Verlusste der Spiegel müssen hierbei jedoch möglichst gering sein,
+um Oszillatorverhalten zu erreichen. Ein selbsterhaltender Resonator ist nur dann möglich, wenn diese Verluste kleiner sind, als die Verstärkung durch die induzierten Emissionen.
+Es folgt somit für einen stabilen Resonator die Relation
+\begin{equation}
+    0 \leq g_1 \cdot g_2 \leq 1.
+\end{equation}
+\noindent
+Hierbei sind die Resonatorparameter $g_1$ und $g_2$ gegeben durch
+\begin{equation}
+    g_\text{i} = 1 - \frac{L}{r_\text{i}}.
+\end{equation}
+\noindent
+$L$ beschreibt hierbei die Resonatorlänge und $r_\text{i}$ die Krümmungsradien der Spiegel. Da die Resonatorlänge sehr viel größer ist, als die Wellenlänge des Lasers,
+gibt es sehr viele Frequenzen, die die Resonatorbedingung einer stehenden Welle erfüllen.
+
+
+
+\subsection{TEM-Moden}
+
+Die möglichen Wellenlängen im Resonator werden als longitudinale Mode bezeichnet. Da die Resonatorspiegel nicht frei von Unebenheiten sind, können auch transversale
+Moden auftreten. Die verschiedenen Moden eines Resonators werden als $\symup{TEM}_\text{lqp}$ klassifiziert, wobei die Indizes l und p die Knoten in x- und y-Richtung
+und q die longitudinale Mode beschreiben. Die $\symup{TEM}_\text{00}$ Grundmode ist hierbei die Mode mit der höchsten Symmetrie und daher mit den geringsten Verlusten.
+Ihre Intensitätsverteilung kann durch eine Gaußverteilung der Form
+\begin{equation}
+I(r)=I_0e^{\frac{-2r^2}{\omega^2}}
+\end{equation}
+beschrieben werden, wobei $I_0$ die Maximalintensität, $r$ der Abstand zur optischen Achse und $\omega$ der Strahlradius ist.
+Dieser kann über
+\begin{equation}
+  \omega(z)=\omega_0\sqrt{1+\Bigl(\frac{\theta z}{\omega_0}\Bigr)^2},
+\end{equation}
+mit dem Abstand $z$ von der minimalen Strahltaillie $\omega_0$, berechnet werden.
+$\theta=\frac{\lambda}{\pi}\omega_0$ beschreibt hierbei die Divergenz des Gaußschen Strahls.
+
+
+\subsection{Wellenlänge}
+
+Trifft kohärentes Licht durch ein optisches Gitter auf einen Schirm, so entsteht ein Beugungsmuster. Durch Messen des Abstandes vom Gitter zum Schirm und von den
+jeweiligen Maxima zum Hauptmaximum kann mit der Gleichung
+\begin{align}
+    \lambda = \frac{b}{n}\cdot\sin\left(\tan^{-1}\left(\frac{d_n}{L}\right)\right).
+\end{align}
+\noindent
+die Wellenlänge bestimmt werden.

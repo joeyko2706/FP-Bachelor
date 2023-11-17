@@ -1,12 +1,210 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-\begin{figure}
+
+\subsection{Messung der magnetischen Flussdichte}
+\label{subsec:Flussdichte}
+
+Die Werte von der Messung der magnetischen Flussdichte sind \autoref{tab:fluss} zu entnehmen.
+
+
+\begin{table}[H]
+  \caption{Messwerte der magnetischen Flussdichte.}
+  \label{tab:fluss}
   \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
+  \begin{tabular}{c c}
+      \toprule
+      Abstand [$\si{\milli\metre}$] & Flussdichte [$\si{\milli\tesla}$]\\
+      \midrule
+      -10 & 277 \\
+      -9 & 311 \\
+      -8 & 344 \\
+      -7 & 368 \\
+      -6 & 384 \\
+      -5 & 393 \\
+      -4 & 401 \\
+      -3 & 406 \\
+      -2 & 409 \\
+      -1 & 411 \\
+      0 & 411 \\
+      1 & 410 \\
+      2 & 408 \\
+      3 & 405 \\
+      4 & 399 \\
+      5 & 390 \\
+      6 & 379 \\
+      7 & 364 \\
+      8 & 333 \\
+      9 & 303 \\
+      10 & 253 \\
+      \bottomrule
+    \end{tabular}
+\end{table}
+
+\noindent
+Die Messwerte sind in Folgender \autoref{fig:fluss} graphisch dargestellt.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot-Fluss.pdf}
+  \caption{Messwerte der magnetischen Flussdichte.}
+  \label{fig:fluss}
+\end{figure}
+
+\noindent
+Der maximale Wert für die magnetische Flussdichte kann als $\SI{411}{\milli\tesla}$ abgelesen werden.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Bestimmung der Rotationswinkel}
+\label{subsec:Rotationswinkel}
+
+Die Eigenschaften der drei verwendeten Proben sind in \autoref{tab:proben} aufgeführt.
+
+
+\begin{table}[H]
+  \caption{Eigenschaften der verwendeten Proben.}
+  \label{tab:proben}
+  \centering
+  \begin{tabular}{l | c c c}
+      & 1.Probe & 2.Probe & 3.Probe \\
+      \hline
+      Dotierung $N$ [$\si{\per\cubic\centi\metre}$] & - & $1,2 \cdot 10^{18}$   & $2,8 \cdot 10^{18}$ \\
+      Länge $L$ [$\si{\milli\metre}$] & 5,11 & 1,36 & 1,296 \\
+    \end{tabular}
+\end{table}
+
+\noindent
+Die Messwerte der Drehwinkel sind in den folgenden Tabellen für die jeweiligen Proben dargestellt. $\theta_{1}$ und $\theta_{2}$ beschreiben hierbei die gemessenen Winkel bei
+entgegengesetzt gepolten Magnetfeldern. Ebenfalls in der Tabelle aufgeführt sind die zugehörigen Rotationswinkel die durch 
+\begin{align*}
+  \theta = \frac{1}{2} (\theta_1 - \theta_2)
+\end{align*}
+\noindent
+folgen. Die Rotationswinkel werden hierbei mit Hinblick auf weitere Rechnungen im Bogenmaß angegeben und auf die jeweilige Länge $L$ der zugehörigen Probe normiert.
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c c}
+    $\lambda/\si{\micro\meter}$ & $\theta_{1}/\si{\degree}$ & $\theta_{2}/\si{\degree}$ & $\theta/d/\symup{rad}\, \si{m}^{-1}$\\
+    \midrule
+    1,06  &  129,42  &  105,75  &  40,5 \\
+    1,29  &  115,33  &  108,83  &  11,12 \\
+    1,45  &  127,83  &  109,83  &  30,8 \\
+    1,72  &  121,33  &  111,67  &  16,54 \\
+    1,96  &  120,83  &  112,75  &  13,83 \\
+    2,156 &  124,0   &  116,0   &  13,69 \\
+    2,34  &  125,58  &  121,33  &  7,27 \\
+    2,51  &  135,17  &  130,0   &  8,84 \\
+    2,65  &  121,42  &  119,67  &  2,99 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Messwerte der zwei Winkel für die jeweilige Wellenlänge mit der zugehörigen Winkeldifferenz in Radiant für die undotierte Probe.}
+  \label{tab:m1}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c c}
+    $\lambda/\si{\micro\meter}$ & $\theta_{1}/\si{\degree}$ & $\theta_{2}/\si{\degree}$ & $\theta/d/\symup{rad}\, \si{m}^{-1}$\\
+    \midrule
+    1,06  &  121,08  &  112,25  &  56,68 \\
+    1,29  &  112,75  &  121,25  &  54,54 \\
+    1,45  &  118,75  &  116,0   &  17,65 \\
+    1,72  &  119,0   &  116,83  &  13,9 \\
+    1,96  &  119,17  &  111,33  &  50,26 \\
+    2,156 &  116,92  &  127,08  &  65,24 \\
+    2,34  &  131,25  &  129,92  &  8,56 \\
+    2,51  &  0,0     &  0,0     &  0,0 \\
+    2,65  &  104,75  &  123,33  &  119,24 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Messwerte der zwei Winkel für die jeweilige Wellenlänge mit der zugehörigen Winkeldifferenz in Radiant für die $1,2 \cdot 10^{18} \si{\per\cubic\centi\metre}$ Probe.}
+  \label{tab:m1}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c c}
+    $\lambda/\si{\micro\meter}$ & $\theta_{1}/\si{\degree}$ & $\theta_{2}/\si{\degree}$ & $\theta/d/\symup{rad}\, \si{m}^{-1}$\\
+    \midrule
+    1,06  &  122,5   &  108,92  &  91,46 \\
+    1,29  &  118,67  &  110,0   &  58,36 \\
+    1,45  &  120,08  &  112,92  &  48,26 \\
+    1,72  &  119,17  &  108,83  &  69,58 \\
+    1,96  &  121,75  &  109,33  &  83,61 \\
+    2,156 &  122,5   &  111,83  &  71,82 \\
+    2,34  &  122,67  &  121,25  &  9,54 \\
+    2,51  &  0,0     &  0,0     &  0,0 \\
+    2,65  &  127,33  &  108,33  &  127,94 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Messwerte der zwei Winkel für die jeweilige Wellenlänge mit der zugehörigen Winkeldifferenz in Radiant für die $2,8 \cdot 10^{18} \si{\per\cubic\centi\metre}$ Probe.}
+  \label{tab:m1}
+\end{table}
+\noindent
+Die sich daraus ergebenden Winkeldifferenzen sind in \autoref{fig:diffwerte} gegen $\lambda^2$ graphisch dargestellt.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot-Werte.pdf}
+  \caption{Messwerte der Rotationswinkel gegen jeweilige Wellenlänge $\lambda^2$ für alle drei Proben.}
+  \label{fig:diffwerte}
 \end{figure}
 
 
-Siehe \autoref{fig:plot}!
+\subsection{Bestimmung der effektiven Masse}
+\label{subsec:masse}
+
+Um die effektive Masse zu bestimmen, werden zunächst von den Werten der dotierten Proben, die der hochreinen GaAs Probe subtrahiert, um die Effekte der Leitungselektronen
+auf den Rotationswinkel zu isolieren. Die Differenzen werden anschließend, wie zuvor, gegen $\lambda^2$ aufgetragen und eine lineare Ausgleichsrechnung durchgeführt.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot-linReg.pdf}
+  \caption{Differenzwerte der Rotationswinkel von Dotierten und Undotierten Proben mit Ausgleichsgeraden.}
+  \label{fig:diffwerte2}
+\end{figure}
+
+\noindent
+Die linearen Ausgleichsrechnungen der Form
+
+\begin{align}
+  \label{eq:mulm}
+  \theta_\text{frei} (\lambda^2) = a \cdot \lambda^2
+\end{align}
+
+\noindent
+liefern die Werte
+
+\begin{align*}
+  a_1 = (15,6 \pm 4,56) \, \si{\meter}^{-3} \\
+  a_2 = (13,6 \pm 3,83) \, \si{\meter}^{-3},
+\end{align*}
+\noindent
+wobei zu beachten ist, dass die Werte für $\lambda = 2,34 \, \si{\micro\metre}$ und $\lambda = 2,51 \, \si{\micro\metre}$ in der Rechnung nicht berücksichtigt wurden.
+Dies liegt daran, dass sie sehr weit vom Trend der anderen Werte abweichen und somit als Ausreißer zu betrachten sind.
+Es kann nun durch einsetzen von \autoref{eq:mulm} in \autoref{eq:effmass} die Gleichung
+\begin{equation*}
+  m^{*} = \sqrt{\frac{e_0^3}{8\pi^2 \varepsilon_0 c^3} \frac{N B}{n} \frac{1}{a}}
+\end{equation*}
+\noindent
+zur Bestimmung der effektiven Masse gefunden werden. Für die Berechnung werden folgende Werte verwendet.
+\begin{align*}
+  N_1 &= 1,2 \cdot 10^{12} \, \si{\meter}^{-3} \\
+  N_2 &= 2,8 \cdot 10^{12} \,\si{\meter}^{-3} \\
+  a_1 &= (15,6 \pm 4,56) \, \si{\meter}^{-3} \\
+  a_2 &= (13,6 \pm 3,83) \, \si{\meter}^{-3} \\
+  B &= 0,411 \, \si{\tesla} \\
+  n &= 3,354 \\
+  e_0 &= 1,602 \cdot 10^{-19} \, \si{\coulomb} \\
+  \varepsilon_0 &= 8,854 \cdot 10^{-12} \, \si{\ampere\second\per\volt\per\metre} \\
+  c &= 2,998 \cdot 10^{8} \, \si{\metre\per\second} \\
+\end{align*}
+\noindent
+Die Werte liefern für die effektive Masse die Ergebnise
+
+\begin{align*}
+  m_1^* = (4,5 \pm 0,7) \cdot 10^{-32} \si{\kilo\gram} \\
+  m_2^* = (7,4 \pm 1,0) \cdot 10^{-32} \si{\kilo\gram}.
+\end{align*}
+

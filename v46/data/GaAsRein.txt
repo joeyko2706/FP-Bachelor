@@ -1,0 +1,19 @@
+#Die Daten werden in Grad°,Sekunde' aufgenommen, müssen aber erst in rad umgerechnet werden
+129 25 1.06  #lambda=1,06µm
+105 45 1.06  #erster umgepolter
+115 20 1.29  #lambda=1,29µm
+108 50 1.29  #erster umgepolter
+127 50 1.45  #lambda = 1,45µm
+109 50 1.45  #erster umgepolter
+121 20 1.72  #lamda=1,72µm
+111 40 1.72  #erster umgepolter
+120 50 1.96  #lambda=1,96µm
+112 45 1.96  #erster umgepolter
+123 60 2.156  #lambda=2,156µm
+116 00 2.156  #erster umgepolter
+125 35 2.34  #lambda=2,34µm
+121 20 2.34  #erster umgepolter
+135 10 2.51  #lambda=2,510
+130 00 2.51  #erster umgepolter
+121 25 2.65  #lambda=2,65
+119 40 2.65

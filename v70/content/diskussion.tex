@@ -1,2 +1,82 @@
 \section{Diskussion}
 \label{sec:Diskussion}
+
+Zusammenfassend kann gesagt werden, dass die Messungen ohne Schwierigkeiten verliefen und die Messergebnisse den Erwartungen entsprechen. Lediglich bei der
+Leckratenmessung der Drehschieberpumpe lieferten die drei identischen Messungen stark variierende Ergebnisse.
+Dies ist mit hoher Wahrscheinlichkeit auf eine nicht ausreichende Genauigkeit beim Einstellen des Gleichgewichtsdrucks
+zurückzuführen.
+\noindent
+Die bestimmten Werte für das Saugvermögen der Turbomolekularpumpe sind in \autoref{tab:abw_turbo} zusammen mit der relativen Abweichung zum Wert,
+der vom Hersteller angegeben wurde, abgebildet. Für die Turbomolekularpumpe sind dies $S = \SI{77}{l/s}$. Von der Evakuierungsmessung wurde hierbei lediglich der
+Wert des ersten Bereiches verwendet.
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{S [table-format=5.0]  c c}
+     \toprule
+     {Verfahren} & $\text{S} \mathbin{\scalebox{1.5} / } \si{\litre\per\second}$ & $\text{relative Abweichung} \mathbin{\scalebox{1.5} / } \si{\percent}$ \\
+     \midrule
+     \text{Evakuierung}                            &  10,0 \pm 1,1      & 87,01 \\
+     \text{Leck $\SI{5e-5}{\milli\bar}$}         & 21 \pm 7            & 72,73 \\
+     \text{Leck $\SI{7e-5}{\milli\bar}$}          & 27 \pm 9             &  64,94 \\
+     \text{Leck $\SI{1e-4}{\milli\bar}$}         & 34 \pm 14             & 55,84 \\
+     \text{Leck $\SI{2e-4}{\milli\bar}$}         & 38 \pm 13            &  50,65 \\
+    \bottomrule
+    \end{tabular}
+    \caption{Saugvermögen und relative Abweichungen zur Herstellerangabe der Turbomolekularpumpe.}
+    \label{tab:abw_turbo}
+\end{table} 
+
+\noindent
+Es fällt auf, dass die Messwerte allesamt stark vom angegebenen Wert abweichen, dabei aber für einen steigenden Gleichgewichtsdruck zu Beginn der Messung immer
+mehr dem Herstellerwert entsprechen. Abweichungen könnten hierbei auf den verwendeten Aufbau zurückzuführen sein, bei dem der Druck weit entfernt von der Pumpe
+gemessen wurde. Es muss hierbei der Leitwert des Vakuumgefäßes beachtet werden.
+\newline
+Die Werte des Saugvermögens der Drehschieberpumpe sind ebenfalls in \autoref{tab:abw_dreh} zusammen mit ihren Abweichungen dargestellt. Das Saugvermögen der Pumpe
+ist vom Hersteller als $S = \SI{1,1}{l/s}$ gegeben.
+
+\begin{table}[H]
+    \centering
+    \small
+    \begin{tabular}{S [table-format=5.0]  c c}
+     \toprule
+     {Messverfahren} & $\text{S} \mathbin{\scalebox{1.5} / } \si{\litre\per\second}$ & $\text{relative Abweichung} \mathbin{\scalebox{1.5} / } \si{\percent}$ \\
+     \midrule
+     \text{Evakuierung}                 & 1,01 \pm 0,10            &  8,18 \\
+     \text{Leck $\SI{0,5}{\milli\bar}$} & 0,82 \pm 0.09           &  25,45 \\
+     \text{Leck $\SI{10}{\milli\bar}$}  & 0,99 \pm 0,32            & 10,0 \\
+     \text{Leck $\SI{50}{\milli\bar}$}  & 1,2 \pm 0,4            & 9,09 \\
+     \text{Leck $\SI{100}{\milli\bar}$}  & 1,1 \pm 0,4            & 0 \\
+    \bottomrule
+    \end{tabular}
+    \caption{Saugvermögen und relative Abweichungen zur Herstellerangabe der Drehschieberpumpe.}
+    \label{tab:abw_dreh}
+\end{table}
+
+\noindent
+Hierbei wurde von der Evakuierungsmessung erneut nur der Wert des ersten Bereichs berücksichtigt.
+Die berechneten Werte liegen insgesamt sehr viel näher an den Herstellerangaben, als die der Turbomolekularpumpe und stimmen
+im Rahmen des Messfehlers mit den Herstellerangaben überein.
+\newline
+Die Druckabhängigkeit des Saugvermögens beider Pumpen ist in den folgenden Abbildungen graphisch dargestellt.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{build/saug1.pdf}
+    \caption{Grafische Darstellung der Druckabhängigkeit des Saugvermögens der Turbomolekularpumpe.}
+  \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{build/saug2.pdf}
+    \caption{Grafische Darstellung der Druckabhängigkeit des Saugvermögens der Drehschieberpumpe.}
+  \end{figure}
+
+
+
+
+
+
+
+

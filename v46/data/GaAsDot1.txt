@@ -1,0 +1,18 @@
+121 05 #lambda=1,06µm
+112 15 #erster umgepolter
+112 45 #lambda=1,29µm
+121 15 #erster umgepolter
+118 45 #lambda=1,45 µm
+116 00 #erster umgepolter
+119 00 #lambda=1,72µm
+116 50 #erster umgepolter
+119 10 #lambda=1,96µm
+111 20 #erster umgepolter
+116 55 #lambda=2,156µm
+127 05 #erster umgepolter
+131 15 #lambda=2,34µm
+129 55 #erster umgepolter
+000 00 #lambda=2,51µm
+000 00 #erster umgepolter
+104 45 #lambda=2,65µm
+123 20 #erster umgepolter

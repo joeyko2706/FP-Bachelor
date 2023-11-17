@@ -4,7 +4,6 @@ all:
 	$(MAKE) -C v70
 	$(MAKE) -C v61
 	$(MAKE) -C v60
-	$(MAKE) -C vXXX
 
 clean:
 	$(MAKE) -C v21 clean
@@ -12,6 +11,5 @@ clean:
 	$(MAKE) -C v70 clean
 	$(MAKE) -C v61 clean
 	$(MAKE) -C v60 clean
-	$(MAKE) -C vXXX clean
 
 .PHONY: all clean
